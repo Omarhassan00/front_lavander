@@ -108,7 +108,7 @@
 }
 .container-brands .brands .child-brand .txt-brand{
     width: 230px;
-    height: 90px;
+    height: 100px;
     background: transparent;
     display: flex;
     flex-direction: column;
@@ -181,6 +181,7 @@
     background-position: center center;
 }
 .container-brands .brands .child-brand .txt-brand span{
+    height: 50px;
     font-size: 16px;
     position: absolute;
     bottom: 0;
