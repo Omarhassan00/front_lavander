@@ -6,12 +6,9 @@ const History = () => {
     const { orders , fetchuserOrders} = useProductStore();
     useEffect(() => {
         fetchuserOrders()
-        orders
-        if(!orders){
-            return(<h1>No Order To Show</h1>)
-        }
-	}, [fetchuserOrders, orders]);
-  return (
+    }, [fetchuserOrders, orders]);
+  // console.log(orders);
+    return (
       
       <motion.div
       className="flex flex-col items-center justify-center space-y-4 bg-gray-800 mt-32 shadow-lg rounded-lg p-5 mb-36 max-w-xl mx-auto "
@@ -22,68 +19,67 @@ const History = () => {
     <h2  className="text-2xl font-semibold mb-6 text-purple-800">
       Order History
     </h2>
-    {orders?.map((order) => (
+        {orders.map((allorders) => allorders.map((order) => (
+          <form key={order.id} className="space-y-4">
+            <tr>
+              <td>
+                <h1>Total Amount</h1>
+              </td>
+              <td>
+                <h1>: {order.totalAmount}L.E</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>Strip ID</h1>
+              </td>
+              <td>
+                <h1>: {order.ordernumber}</h1>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h1>Order Time</h1>
+              </td>
+              <td>
+                <h1>: {order.createdAt}</h1>
+              </td>
+            </tr>
+            {order.products.map((product, index) => (
+      <form key={index}>
+      <tr>
+            <td>
+              <h1>Product Name </h1>
+            </td>
+            <td>
+              <h1>: {product.productname}</h1>
+            </td>
+          </tr><tr>
+              <td>
+                <h1>Product Image</h1>
+              </td>
+              <td>
+                <img src={product.productimage} alt={product.productname} />
+              </td>
+            </tr><tr>
+              <td>
+                <h1>quantity</h1>
+              </td>
+              <td>
+                <h1>: {product.quantity}</h1>
+              </td>
+            </tr><tr>
+              <td>
+                <h1>Unit Price</h1>
+              </td>
+              <td>
+                <h1>: {product.price}L.E</h1>
+              </td>
+            </tr></form>
+          ))}
+          </form>
+        )))}
 
-    <form key={orders._id} className="space-y-4">
-      <tr>
-        <td>
-      <h1>Product Name </h1>
-      </td>
-        <td>
-      <h1>: {order.productname}</h1>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>Product Image</h1>
-      </td>
-        <td>
-      <img src={order.productimage} alt={order.productname}/>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>quantity</h1>
-      </td>
-        <td>
-      <h1>: {order.quantity}</h1>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>Unit Price</h1>
-      </td>
-        <td>
-      <h1>: {order.price}L.E</h1>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>Total Amount</h1>
-      </td>
-        <td>
-      <h1>: {order.totalAmount}L.E</h1>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>Strip ID</h1>
-      </td>
-        <td>
-      <h1>: {order.stripeSessionId}</h1>
-      </td>
-      </tr>
-      <tr>
-        <td>
-      <h1>Order Time</h1>
-      </td>
-        <td>
-      <h1>: {order.timestamps}</h1>
-      </td>
-      </tr>
-    </form>
-  ))
-}
   </motion.div>
   )
 }

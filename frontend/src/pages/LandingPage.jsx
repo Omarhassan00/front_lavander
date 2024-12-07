@@ -37,7 +37,7 @@ const LandingPage = () => {
     onClick={ ()=> {
         setTimeout(() => {
             window.location.href = "/home" ;
-        }, 8000);          
+        }, 5500);          
         const GetStarted = document.querySelector(".Get_Started");
         const ContainerDoor = document.querySelector(".container-door");
         const LandDoor1 = document.querySelector(".land-door1");
