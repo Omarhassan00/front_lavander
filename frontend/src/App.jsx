@@ -65,7 +65,7 @@ function App() {
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_45%,rgba(255,255,255,0.57)_100%)]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_10%,rgba(255,255,255,0.57)_100%)]" />
         </div>
       </div>
       <div className="relative z-50 ">
@@ -90,16 +90,16 @@ function App() {
 					<Route path='/Product_page' element={<Product_page />} />	
           <Route path='/category/:category' element={<CategoryPage />} />
 
-					<Route path='/Lavant/:gender' element={<LavantgenderPage />} />
-          <Route path='/Lavand/:gender' element={<Lavandgenderpage />} />
-          <Route path='/Lavande/:gender' element={<Lavande />} />
-          <Route path='/Lava/:gender' element={<Lava />} />
-          <Route path='/Lavanderita/:gender' element={<Lavanderita />} />
-          <Route path='/Lavandula/:gender' element={<Lavandula />} />
-          <Route path='/Lavanderá/:gender' element={<Lavanderá />} />
-          <Route path='/Lavash/:gender' element={<Lavash />} />
-          <Route path='/Lavarne/:gender' element={<Lavarne />} />
-          <Route path='/Lavania/:gender' element={<Lavania />} />
+					<Route path='/LAVANT/:gender' element={<LavantgenderPage />} />
+          <Route path='/LAVAND/:gender' element={<Lavandgenderpage />} />
+          <Route path='/LAVANDE/:gender' element={<Lavande />} />
+          <Route path='/LAVA/:gender' element={<Lava />} />
+          <Route path='/LAVANDERITA/:gender' element={<Lavanderita />} />
+          <Route path='/LAVANDULA/:gender' element={<Lavandula />} />
+          <Route path='/LAVANDERÁ/:gender' element={<Lavanderá />} />
+          <Route path='/LAVASH/:gender' element={<Lavash />} />
+          <Route path='/LAVARNE/:gender' element={<Lavarne />} />
+          <Route path='/LAVANIA/:gender' element={<Lavania />} />
 
           <Route path='/cart' element={user ? <CartPage /> : <Navigate to='/login' />} />
 					<Route
