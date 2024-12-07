@@ -15,9 +15,9 @@ const Plogs = ({ article }) => {
   };
   const DrawerList = (
     <Box
-      className="bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_45%,rgba(255,255,255,0.57)_100%)]"
+      className="bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_45%,rgba(255,255,255,0.57)_100%)] h-auto"
       sx={{
-        width: 1000,
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         flexWrap: "nowrap",
@@ -28,7 +28,6 @@ const Plogs = ({ article }) => {
         gridTemplateColumns: "repeat(1, 1fr)",
         transform: "none",
         transition: "transform 225ms cubic-bezier(0, 0, 0.2, 1)",
-        gap: "0px",
       }}
       role="presentation"
       onClick={toggleDrawer(false)}
@@ -38,14 +37,14 @@ const Plogs = ({ article }) => {
           key={article}
           disablePadding
           sx={{
-            width: "45vw",
+            width: "auto",
+            height: "85%",
             borderRadius: "40px",
-            boxShadow: "0 0 20px #4b307e",
           }}
         >
           <ImageListItem
             sx={{
-              height: "90%",
+              height: "90% !important",
               borderRadius: "40px",
               boxShadow: "0 0 20px #4b307e",
             }}
@@ -64,8 +63,8 @@ const Plogs = ({ article }) => {
 
       <List>
         <ListItem key={article} disablePadding>
-          <div className="plog-glass-content  mt-6">
-            <h1 style={{ fontSize: "2em" }}>{article.title}</h1>
+          <div className="plog-glass-content">
+            <h1 className="plog-glass-in-title" style={{ fontSize: "2em" }}>{article.title}</h1>
             <p style={{ fontSize: "1em", marginTop: "12px" }}>
               {article.description}
             </p>
@@ -75,7 +74,7 @@ const Plogs = ({ article }) => {
     </Box>
   );
   return (
-    <div className="plog-container-big gap-96 grid grid-cols-1 ">
+    <div className="plog-container-big grid grid-cols-1 ">
       <div className="plog-container grid grid-cols-1 ">
         <div className="plog-card">
           <div className="logo-plog">
@@ -116,7 +115,7 @@ const Plogs = ({ article }) => {
                   <i className="fa-brands fa-square-twitter"></i>
                 </span>
               </div>
-              <Button onClick={toggleDrawer(true)}>
+              <Button className="btn-FT-link" onClick={toggleDrawer(true)}>
                 <div className="FT-link">
                   Read More{" "}
                   <i className="fa-solid fa-arrow-up-right-square"></i>

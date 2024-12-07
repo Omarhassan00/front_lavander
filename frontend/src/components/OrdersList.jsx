@@ -60,7 +60,7 @@ const OrdersList = () => {
 
         <tbody className="bg-gray-800 divide-y divide-gray-700">
           {orders?.map((order) => (
-            <tr key={orders._id} className="hover:bg-gray-700">
+            <tr key={order._id} className="hover:bg-gray-700">
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 h-10 w-10">
@@ -68,18 +68,18 @@ const OrdersList = () => {
                   </div>
                   <div className="ml-4">
                     <div className="text-sm font-medium text-white">
-                      {orders.user.Frist_Name} {orders.user.Last_Name}
+                      {order.user.Frist_Name} {order.user.Last_Name}
                     </div>
                   </div>
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="text-sm text-gray-300">
-                  {orders.user.email}
+                  {order.user.email}
                 </div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <div className="text-sm text-gray-300">{orders.user.address}</div>
+                <div className="text-sm text-gray-300">{order.user.address}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="text-sm text-gray-300">{order.totalAmount}</div>

@@ -15,9 +15,9 @@ const SpiltArticles = ({ article }) => {
   };
   const DrawerList = (
     <Box
-      className="bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_45%,rgba(255,255,255,0.57)_100%)]"
+      className="box_sm bg-[radial-gradient(ellipse_at_top,rgba(128,0,255,0.5)_0%,rgba(207,163,255,0.36)_45%,rgba(255,255,255,0.57)_100%)]"
       sx={{
-        width: 1000,
+        width: "100%",
         display: "flex",
         flexDirection: "column",
         flexWrap: "nowrap",
@@ -64,11 +64,11 @@ const SpiltArticles = ({ article }) => {
 
       <List>
         <ListItem key={article} disablePadding>
-          <div className="plog-glass-content  mt-6">
-            <h1 style={{ fontSize: "2em",borderBottom: "2px double",display: "flex",textAlign: "center",alignItems: "center",justifyContent: "center",}}>
+          <div className="plog-glass-content ">
+            <h1 style={{ fontSize: "1.8em",borderBottom: "2px double",display: "flex",textAlign: "center",alignItems: "center",justifyContent: "center",sm:("font-size:1.5em"),}}>
               {article.title}
               </h1>
-            <p style={{ fontSize: "1em", marginTop: "12px",display:" flex",alignItems: "center",textAlign: "center",padding: "0px 20px",}}>
+            <p style={{ fontSize: "1em", marginTop: "12px",display:" flex",alignItems: "center",textAlign: "center",padding: "0px 10px",}}>
               {article.description}
             </p>
           </div>
@@ -78,8 +78,8 @@ const SpiltArticles = ({ article }) => {
   );
 
   return (
-    <div>
-      <Button onClick={toggleDrawer(true)}>
+    <div className="w-full h-full relative">
+      <Button className="btn_plog_card_main" onClick={toggleDrawer(true)}>
         <div
           className="btn_plog_card_fet rounded-md">
           <img
@@ -89,7 +89,7 @@ const SpiltArticles = ({ article }) => {
           />
         </div>
       </Button>
-      <div id="Text_l" className="p-4 flex justify-center align-middle rounded-md  shadow-xl"
+      <div id="Text_l" className="px-4 w-full flex justify-center align-middle rounded-md  shadow-xl"
       style={{background:"linear-gradient(to top, rgb(137 40 203), transparent)"}}
       >
         <h3 className="text-lg font-semibold mb-2 text-purple-950 ">

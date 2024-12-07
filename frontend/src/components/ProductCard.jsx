@@ -136,12 +136,12 @@ const ProductCard =  ({product}) => {
       </div>
 
       <div className="mt-4 px-5 pb-5">
-        <h5 className="text-xl font-semibold tracking-tight text-black">
+        <h5 className="text-2xl uppercase font-semibold tracking-tight text-purple-800">
           {product.name}
         </h5>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
-            <span className="text-3xl font-bold text-purple-800">
+            <span className="text-xl font-bold text-purple-800">
               {product.price}L.E
             </span>
           </p>
