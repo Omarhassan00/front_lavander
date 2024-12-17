@@ -92,15 +92,14 @@ router.post('/start-payment', protectRoute, async (req, res) => {
         
         const newOrder = await Order.create({
             user: user.id,
-            products: [...products.map((oneproduct) => ({
-                product: oneproduct._id,
+            products: products.map((oneproduct) => ({
                 productname: oneproduct.name,
                 productimage: oneproduct.main_image,
                 quantity: oneproduct.quantity,
                 price: oneproduct.price,
-            }))],
+            })),
             totalAmount: totalAmount,
-            stripeSessionId: orderId
+            ordernumber: orderId,
         });
 
         await newOrder.save()

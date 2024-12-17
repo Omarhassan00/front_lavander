@@ -9,21 +9,14 @@ const orderSchema = new mongoose.Schema(
 		},
 		products: [
 			{
-				product: {
-					type: mongoose.Schema.Types.ObjectId,
-					ref: "Product",
-					required: true,
-				},
 				productname: {
 					type: String,
-					required: true,
-				}, productimage: {
+				},
+				productimage: {
 					type: String,
-					required: true,
 				},
 				quantity: {
 					type: Number,
-					required: true,
 					min: 1,
 				},
 				price: {
@@ -40,6 +33,7 @@ const orderSchema = new mongoose.Schema(
 		},
 		ordernumber: {
 			type: String,
+			unique: true,
 		},
 		isFeatured: {
 			type: Boolean,
