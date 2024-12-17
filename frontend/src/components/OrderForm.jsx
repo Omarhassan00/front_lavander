@@ -13,13 +13,14 @@ const OrderForm = (order) => {
         Order Details
       </h2>
 
-      <form className="space-y-4">
+      {order.order.products?.map((product , index) => (
+      <form className="space-y-4" key={index}>
         <tr>
           <td>
         <h1>Product Name </h1>
         </td>
           <td>
-        <h1>: {order.order.productname}</h1>
+        <h1>: {product.productname}</h1>
         </td>
         </tr>
         <tr>
@@ -27,7 +28,7 @@ const OrderForm = (order) => {
         <h1>Product Image</h1>
         </td>
           <td>
-        <img src={order.order.productimage} alt={order.order.productname}/>
+        <img src={product.productimage} alt={product.productname}/>
         </td>
         </tr>
         <tr>
@@ -35,7 +36,7 @@ const OrderForm = (order) => {
         <h1>quantity</h1>
         </td>
           <td>
-        <h1>: {order.order.quantity}</h1>
+        <h1>: {product.quantity}</h1>
         </td>
         </tr>
         <tr>
@@ -43,7 +44,7 @@ const OrderForm = (order) => {
         <h1>Unit Price</h1>
         </td>
           <td>
-        <h1>: {order.order.price}L.E</h1>
+        <h1>: {product.price}L.E</h1>
         </td>
         </tr>
         <tr>
@@ -59,7 +60,7 @@ const OrderForm = (order) => {
         <h1>Strip ID</h1>
         </td>
           <td>
-        <h1>: {order.order.stripeSessionId}</h1>
+        <h1>: {order.order.ordernumber}</h1>
         </td>
         </tr>
         <tr>
@@ -71,6 +72,7 @@ const OrderForm = (order) => {
         </td>
         </tr>
       </form>
+      ))}
     </motion.div>
     
   );

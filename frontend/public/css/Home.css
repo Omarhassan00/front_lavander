@@ -1112,13 +1112,6 @@
     position: absolute;
     margin: 0px auto;
   }
-  .css-1u169s7-MuiList-root {
-    width: 390px !important;
-    height: 390px !important;
-    display: grid !important;
-    place-items: center !important;
-    place-content: center !important;
-  }
   .css-igv6l8-MuiListItem-root {
     width: 95% !important;
 }

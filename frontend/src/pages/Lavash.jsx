@@ -7,19 +7,19 @@ import "../../public/css/ProductCard.css"
 
 const Lavash = () => {
 
-	const { fetchProductsBygenderlavant, products } = useProductStore();
+	const { fetchProductsBygenderLavash, products } = useProductStore();
 
 	const { gender } = useParams();
 
 	useEffect(() => {
-		fetchProductsBygenderlavant(gender);
-	}, [fetchProductsBygenderlavant, gender]);
+		fetchProductsBygenderLavash(gender);
+	}, [fetchProductsBygenderLavash, gender]);
 	return (
 		<div className='min-h-screen'>
 			<div className='relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
 				<div className='product_card'></div>
 				<motion.h1
-					className='text-center text-4xl sm:text-5xl font-bold text-purple-800 mb-8'
+					className='text-brand-top text-center uppercase text-4xl sm:text-5xl font-bold text-purple-800 mb-8'
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8 }}

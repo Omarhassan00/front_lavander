@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           <div className="footer-col">
             <h4>Our Brands</h4>
-            <ul>
+            <ul className="Brands-nav">
               <li>
                 <Link to={"/category/Lavant"}>LAVANT</Link>
               </li>

@@ -14,25 +14,25 @@ const HomePage = () => {
   }, [fetchFeaturedArticles]);
   return (
     <div
-    onClick = { () => {
-      Navbar.menuBtn
-    }}
+      onClick={() => {
+        Navbar.menuBtn;
+      }}
     >
-              {!isLoading && Articles.length > 0 && (
-          <FeaturedArticle featuredArticle={Articles} />
-        )}
-        
+      {!isLoading && Articles.length > 0 && (
+        <FeaturedArticle featuredArticle={Articles} />
+      )}
+
       <div className="media-icon">
-      <Link to="https://www.facebook.com/maidarawe?mibextid=ZbWKwL"></Link>
-          <Link to="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="></Link>
-          <Link to="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"></Link>
-        </div>
-        <h1 className="text-center text-5xl sm:text-6xl my-8 font-bold text-purple-600 mb-4">
-            Our Brands
-          </h1>
-        <div className="container-brands">
+        <Link to="https://www.facebook.com/maidarawe?mibextid=ZbWKwL"></Link>
+        <Link to="https://www.instagram.com/lavendermarketing634?igsh=YzAwZjE1ZTI0Zg=="></Link>
+        <Link to="https://www.tiktok.com/@lavanderlifeexporting?_t=8piAmaKUfNB&_r=1"></Link>
+      </div>
+      <h1 className="text-center text-5xl sm:text-6xl my-8 font-bold text-purple-600 mb-4">
+        Our Brands
+      </h1>
+      <div className="container-brands">
         <div className="brands">
-        <Link to={"/category/Lavand"}>
+          <Link to={"/category/Lavand"}>
             <div className="child-brand">
               <div className="img-brand imag1"></div>
               <div className="txt-brand txt1">
@@ -40,11 +40,10 @@ const HomePage = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavanderá"}>
-
+          <Link to={"/category/Lavant"}>
             <div className="child-brand">
-              <div className="img-brand imag2"></div>
-              <div className="txt-brand txt2">
+              <div className="img-brand imag10"></div>
+              <div className="txt-brand txt10">
                 <span>
                   African brand in lavander
                   <br />
@@ -65,11 +64,10 @@ const HomePage = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavandula"}>
-
+          <Link to={"/category/Lava"}>
             <div className="child-brand">
-              <div className="img-brand imag4"></div>
-              <div className="txt-brand txt4">
+              <div className="img-brand imag8"></div>
+              <div className="txt-brand txt8">
                 <span>The elegance of Handmade in different colors</span>
               </div>
             </div>
@@ -84,53 +82,48 @@ const HomePage = () => {
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavarn"}>
-
+          <Link to={"/category/Lavandula"}>
             <div className="child-brand">
-              <div className="img-brand imag6"></div>
-              <div className="txt-brand txt6">
+              <div className="img-brand imag4"></div>
+              <div className="txt-brand txt4">
                 <span>
                   The elegance of spanish fashion with scent of lavander
                 </span>
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavash"}>
-
+          <Link to={"/category/Lavanderá"}>
             <div className="child-brand">
-              <div className="img-brand imag7"></div>
-              <div className="txt-brand txt7">
+              <div className="img-brand imag2"></div>
+              <div className="txt-brand txt2">
                 <span>
                   The elegance of French fashion with the scent of lavander
                 </span>
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lava"}>
-
+          <Link to={"/category/Lavash"}>
             <div className="child-brand">
-              <div className="img-brand imag8"></div>
-              <div className="txt-brand txt8">
+              <div className="img-brand imag7"></div>
+              <div className="txt-brand txt7">
                 <span>Leather furniture with a lavander mixture</span>
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavania"}>
-          
+          <Link to={"/category/Lavarn"}>
             <div className="child-brand">
-              <div className="img-brand imag9"></div>
-              <div className="txt-brand txt9">
+              <div className="img-brand imag6"></div>
+              <div className="txt-brand txt6">
                 <span>
                   Perfume with all French and Italian lavander fragrance
                 </span>
               </div>
             </div>
           </Link>
-          <Link to={"/category/Lavant"} >
-
+          <Link to={"/category/Lavania"}>
             <div className="child-brand">
-              <div className="img-brand imag10"></div>
-              <div className="txt-brand txt10">
+              <div className="img-brand imag9"></div>
+              <div className="txt-brand txt9">
                 <span>
                   Stationery and school supplies with the scent of lavander
                 </span>
@@ -167,25 +160,29 @@ const HomePage = () => {
           <div
             className="img img2"
             style={{
-              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222538/static/koxeclafqaomhde4odmr.jpg')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222538/static/koxeclafqaomhde4odmr.jpg')",
             }}
           ></div>
           <div
             className="img img3"
             style={{
-              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222540/static/eq86zt5rklwlyaqxlkjw.png')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222540/static/eq86zt5rklwlyaqxlkjw.png')",
             }}
           ></div>
           <div
             className="img img4"
             style={{
-              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/wojwaa4fomizftgaazoq.png')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/wojwaa4fomizftgaazoq.png')",
             }}
           ></div>
           <div
             className="img img5"
             style={{
-              backgroundImage: "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/qxxayhgluwstqp3z5ore.png')",
+              backgroundImage:
+                "url('https://res.cloudinary.com/ds7lqwxbp/image/upload/v1729222539/static/qxxayhgluwstqp3z5ore.png')",
             }}
           ></div>
           {/* <div
